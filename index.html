@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <title>New page</title>
+  <link href="https://fonts.googleapis.com/css?family=Press+Start+2P" rel="stylesheet">
+  <link rel="stylesheet" href="css/chota.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body onload="start()">
+  <span id="clock"></span>
+  <header id="greeting">
+    <h2>Welcome, <span id="username">martini97</span>!</h2>
+  </header>
+  <div class="row"  id="searchfield">
+    <div class="col">
+      <div id="search-container">
+        <label for="search" id=search-label""></label>
+        <input type="text" id="search" autofocus>
+      </div>
+    </div>
+  </div>
+  <div class="row"  id="container">
+    <div class="col" id="links-search">
+      <h3>search</h3>
+      <ul>
+        <li><a href="https://www.google.com/" target="_blank" data-key="G">[G]oogle</a></li>
+        <li><a href="https://duckduckgo.com/" target="_blank" data-key="d">[d]uck duck go</a></li>
+        <li><a href="https://wiki.archlinux.org/" target="_blank" data-key="a">[a]rch wiki</a></li>
+      </ul>
+    </div>
+    <div class="col" id="links-code">
+      <h3>code</h3>
+      <ul>
+        <li><a href="https://github.com/" target="_blank" data-key="g">[g]ithub</a></li>
+        <li><a href="https://stackoverflow.com/" target="_blank" data-key="s">[s]tackoverflow</a></li>
+      </ul>
+    </div>
+    <div class="col" id="links-media">
+      <h3>media</h3>
+      <ul>
+        <li><a href="https://www.netflix.com/" target="_blank" data-key="n">[n]etflix</a></li>
+        <li><a href="https://www.youtube.com/" target="_blank" data-key="y">[y]outube</a></li>
+        <li><a href="https://thepiratebay.org/" target="_blank" data-key="p">[p]irate bay</a></li>
+      </ul>
+    </div>
+    <div class="col" id="links-social">
+      <h3>social</h3>
+      <ul>
+        <li><a href="https://www.reddit.com/" target="_blank" data-key="r">[r]eddit</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" data-key="f">[f]acebook</a></li>
+        <li><a href="https://web.telegram.org/" target="_blank" data-key="t">[t]elegram</a></li>
+      </ul>
+    </div>
+  </div>
+  <script src="js/main.js" charset="utf-8"></script>
+</body>

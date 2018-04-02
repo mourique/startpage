@@ -1,0 +1,57 @@
+body {
+    font-family: 'Press Start 2P', cursive;
+    color: #d2d2d2;
+    background-color: #232323;
+}
+
+ul  {
+    padding-left: unset;
+}
+
+li {
+    list-style: none;
+}
+
+#greeting {
+    text-align: center;
+    margin: 40px;
+}
+
+#username {
+    color: cyan;
+}
+
+#clock {
+    vertical-align: middle;
+    margin: 10px;
+    position:absolute;
+    top:0;
+    right:0;
+}
+
+#container {
+    margin: 80px 40px;
+}
+
+#container > div {
+    text-align: center;
+    border: thin solid #4b4b4b;
+}
+
+.focused {
+    color: yellow !important;
+    text-decoration: underline solid yellow;
+}
+
+#search-container {
+    width: 25%;
+    margin: 0 auto;
+}
+
+#search {
+    background-color: #232323;
+    color: #d2d2d2;
+    border: unset;
+    border-radius: unset;
+    border-bottom: 1px solid #d2d2d2;
+}
