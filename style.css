@@ -1,5 +1,10 @@
+@font-face  {
+    font-family: 'Press Start 2P';
+    src: url('PressStart2P-Regular.ttf') format('truetype');
+}
+
 body {
-    font-family: 'Press Start 2P', cursive;
+    font-family: 'Press Start 2P';
     color: #d2d2d2;
     background-color: #232323;
 }
@@ -12,7 +17,16 @@ li {
     list-style: none;
 }
 
+#container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 20px 20px;
+    margin: 0 40px;
+}
+
 #greeting {
+    grid-column-start: 1;
+    grid-column-end: 5;
     text-align: center;
     margin: 40px;
 }
@@ -24,13 +38,9 @@ li {
 #clock {
     vertical-align: middle;
     margin: 10px;
-    position:absolute;
-    top:0;
-    right:0;
-}
-
-#container {
-    margin: 80px 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 
 #container > div {
@@ -44,8 +54,17 @@ li {
 }
 
 #search-container {
-    width: 25%;
+    grid-column-start: 1;
+    grid-column-end: 5;
+    width: 100%;
     margin: 0 auto;
+    border: none !important;
+    line-height: 40px;
+    vertical-align: middle;
+}
+
+#search-label > object {
+    margin-bottom: -12px;
 }
 
 #search {
@@ -54,4 +73,6 @@ li {
     border: unset;
     border-radius: unset;
     border-bottom: 1px solid #d2d2d2;
+    width: 25%;
+    vertical-align: middle;
 }
