@@ -6,7 +6,15 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body onload="start()">
-  <span id="clock"></span>
+  <div id="clock">
+    <div id="clock-center"></div>
+    <div id="clock-analog">
+      <div class="hand" id="hand-hours"></div>
+      <div class="hand" id="hand-minutes"></div>
+      <div class="hand" id="hand-seconds"></div>
+    </div>
+    <span id="clock-text"></span>
+  </div>
   <div id="container">
     <header id="greeting">
       <h2>Welcome, <span id="username">martini97</span>!</h2>
@@ -28,6 +36,7 @@
       <ul>
         <li><a href="https://github.com/" target="_blank" data-key="g">[g]ithub</a></li>
         <li><a href="https://stackoverflow.com/" target="_blank" data-key="s">[s]tackoverflow</a></li>
+        <li><a href="https://codepen.io/" target="_blank" data-key="c">[c]odepen</a></li>
       </ul>
     </div>
     <div class="links" id="links-media">
@@ -55,7 +64,7 @@
     <div class="links" id="links-rice">
       <h3>rice</h3>
       <ul>
-        <li><a href="https://www.reddit.com/r/FirefoxCSS+dotfiles+startpages+suckless+unixporn+vimporn+wallpapers+zsh/" target="_blank" data-key="1">[1]reddit rice</a></li>
+        <li><a href="https://www.reddit.com/r/FirefoxCSS+dotfiles+startpages+suckless+unixart+unixporn+vimporn+wallpapers+zsh/" target="_blank" data-key="1">[1]reddit rice</a></li>
         <li><a href="http://dotshare.it/" target="_blank" data-key="D">[D]otshareit</a></li>
       </ul>
     </div>
