@@ -36,13 +36,20 @@ function start() {
   document.addEventListener("keypress", handleKeyPress);
 };
 
+function timeFormat(time) {
+  return time.toString().padStart(2, '0');
+}
+
 function setupClock() {
-    var now = new Date();
-    var hours = now.getHours().toString().padStart(2, '0');
-    var minutes = now.getMinutes().toString().padStart(2, '0');
-    var seconds = now.getSeconds().toString().padStart(2, '0');
-    document.getElementById('clock').innerHTML = hours + ":" + minutes + ":" + seconds;
-    setTimeout(setupClock, 500);
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = now.getMinutes();
+  const seconds = now.getSeconds();
+  document.getElementById('clock-text').innerHTML = `${timeFormat(hours)}:${timeFormat(minutes)}:${timeFormat(seconds)}`
+  document.getElementById('hand-seconds').style.transform = `rotate(${6*seconds+90}deg)`
+  document.getElementById('hand-minutes').style.transform = `rotate(${6*minutes+90}deg)`
+  document.getElementById('hand-hours').style.transform = `rotate(${0.5*(60*hours+minutes)+90}deg)`
+  setTimeout(setupClock, 500);
 };
 
 function handleKeyPress(event) {
@@ -52,9 +59,6 @@ function handleKeyPress(event) {
   const search = document.getElementById('search');
   const choice = document.querySelector(`[data-key='${key}']`);
 
-  const stop = event.preventDefault;
-  console.log(event);
-  
   if (!isTyping && key === ' ') return search.focus();
   if (isTyping && key === 'Escape') return search.blur();
   if (isTyping && key === 'Enter') return submit();
