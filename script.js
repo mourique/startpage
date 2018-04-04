@@ -12,6 +12,7 @@ window.searchEngineUrlMap = {
   y: 'https://www.youtube.com',
   p: 'https://thepiratebay.org',
   f: 'https://www.facebook.com',
+  c: 'https://codepen.io/',
 };
 window.searchEngineIconMap = {
   G: 'icons/google.svg',
@@ -26,6 +27,7 @@ window.searchEngineIconMap = {
   y: 'icons/youtube.svg',
   p: 'icons/thepiratebay.svg',
   f: 'icons/facebook.svg',
+  c: 'icons/codepen.svg',
 };
 setSearchEngine('d')
 
@@ -104,6 +106,9 @@ function submit() {
       break;
     case 'f':
       window.location = `${tool}/search/top/?q=${search}`;
+      break;
+    case 'c':
+      window.location = `${tool}/search/pens?q=${search}&limit=all&type=type-pens`;
       break;
     default:
       return;
